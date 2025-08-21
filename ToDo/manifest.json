@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ToDo – 할일 메모",
+  "description": "간단하고 빠른 할일(ToDo) 관리. 동기화 저장과 배지 카운트 지원.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "할일 메모",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
+
+

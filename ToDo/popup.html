@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>할일 메모</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="title">할일 메모</h1>
+      <form id="new-task-form" aria-labelledby="title">
+        <input id="new-task-input" name="task" type="text" placeholder="할 일을 입력하세요..." autocomplete="off" aria-label="새 할일 입력" />
+        <button id="add-btn" type="submit" aria-label="추가">추가</button>
+      </form>
+    </header>
+
+    <main>
+      <ul id="task-list" aria-label="할일 목록"></ul>
+    </main>
+
+    <footer class="footer">
+      <div class="counters" aria-live="polite">
+        <span id="counter-total">총 0</span>
+        <span id="counter-done">완료 0</span>
+        <span id="counter-left">남은 0</span>
+      </div>
+      <div class="actions">
+        <button id="clear-completed" class="btn btn-danger" type="button">완료 전부 지우기</button>
+      </div>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+  </html>

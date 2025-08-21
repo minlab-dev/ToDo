@@ -1,0 +1,136 @@
+:root {
+  --bg: #101317;
+  --panel: #161b22;
+  --text: #e6edf3;
+  --muted: #a0a6ad;
+  --primary: #3b82f6;
+  --danger: #ef4444;
+  --border: #2a2f37;
+  --done: #10b981;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border-radius: 5vh;
+  overflow: hidden;
+  background: var(--bg);
+}
+body {
+  width: 360px;
+  min-height: 420px;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji";
+  border-radius: 5vh;
+  overflow: hidden;
+}
+
+.header {
+  padding: 12px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+#new-task-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+#new-task-input {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+}
+
+#add-btn {
+  padding: 8px 12px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#add-btn:hover {
+  border-color: var(--text);
+}
+
+#task-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 8px 0 8px;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+.task-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.task-item.done .task-text {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.btn {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--text);
+}
+
+.btn-danger {
+  color: #fff;
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 12px 12px;
+  gap: 12px;
+}
+
+.counters {
+  display: flex;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
